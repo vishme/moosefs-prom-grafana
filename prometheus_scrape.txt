@@ -1,0 +1,12 @@
+  - job_name: "MooseFS_metrics"
+    scrape_interval: 60s
+    scrape_timeout: 20s
+    static_configs:
+      - targets: ['guihost:guiport']
+    params:
+      masterhost: ['masterhost']
+      scope: ['SIG,SIM,SLI,SCS,SIL,SIC']
+      mastercharts: ['mountbytrcvd,mountbytsent,read,write,bytesread,byteswrite,delete,replicate']
+      cscharts: ['none']
+
+
